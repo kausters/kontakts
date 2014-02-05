@@ -66,6 +66,10 @@ header {
 
 section {
 	padding: 60px 15px;
+	@include desktop {
+		padding-top: 96px;
+		padding-bottom: 96px;
+	}
 	text-align: center;
 	position: relative;
 
@@ -97,6 +101,11 @@ section {
 		position: absolute;
 		left: 0; top: 0; right: 0;
 		margin: -40px auto 0;
+		@include desktop {
+			width: 128px;
+			height: 128px;
+			margin-top: -64px;
+		}
 	}
 
 	#interface {

@@ -73,6 +73,8 @@ section {
 
 	p {
 		@include prefixer(hyphens, auto, webkit moz spec);
+		max-width: 980px - (90 * 2);
+		margin: 0 auto;
 	}
 }
 

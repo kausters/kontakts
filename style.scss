@@ -22,6 +22,10 @@ ol,ul{list-style:none;}
 html {
 	background-color: #0e0d0f;
 	font: 18px/1.6em 'Neutra Text', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+	@include desktop {
+		font-size: 24px;
+		line-height: 1.3em;
+	}
 }
 
 body {
@@ -74,6 +78,9 @@ section {
 			content: '';
 			display: block;
 			margin: 0 auto 15px;
+		}
+		@include desktop {
+			font-size: 38px;
 		}
 	}
 

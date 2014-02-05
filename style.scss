@@ -3,6 +3,17 @@ article,aside,footer,header,hgroup,menu,nav,section{display:block;}
 a{color:inherit;text-decoration:none;outline:none;}
 ol,ul{list-style:none;}
 
+@mixin smoothing {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin desktop {
+	@media screen and (min-width: em(1024)) {
+		@content;
+	}
+}
+
 @font-face {
     font-family: 'Neutra Text';
     src: url('fonts/neutratextbook.eot');
@@ -16,12 +27,25 @@ ol,ul{list-style:none;}
 html {
 	background-color: #0e0d0f;
 	font: 18px/1.6em 'Neutra Text', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+	@include desktop {
+		font-size: 24px;
+		line-height: 1.3em;
+		padding-top: 100px;
+	}
+}
+
+body {
+	max-width: 980px;
+	margin: 0 auto;	
 }
 
 header {
 	padding: 0 15px;
 	height: 55px;
 	@include clearfix;
+	@include desktop {
+		padding: 10px 15px 0 35px;
+	}
 
 	h1 {
 		color: #20c9d0;
@@ -30,6 +54,12 @@ header {
 		letter-spacing: 2px;
 		margin: 20px 0;
 		float: left;
+		@include desktop {
+			font-size: 26px;
+			letter-spacing: 4px;
+			margin: 10px 0;
+			@include smoothing;
+		}
 	}
 
 	.contact {
@@ -38,13 +68,17 @@ header {
 		width: 55px;
 		height: 55px;
 		float: right;
-		background: url('img/contact-header.png') 0 center no-repeat;
+		background: url('contact-header.png') 0 center no-repeat;
 		&:hover {
 			background-position: -55px center;
 		}
 		@include hidpi(1.5) {
 			background-image: url('contact-header@2x.png');
 			background-size: 110px 43px;
+		}
+		@include desktop {
+			height: 65px;
+			margin-top: -10px;
 		}
 	}
 }
@@ -53,6 +87,40 @@ section {
 	padding: 60px 15px;
 	text-align: center;
 	position: relative;
+	@include desktop {
+		padding-top: 96px;
+		padding-bottom: 96px;
+		border-top-right-radius: 15px;
+		border-top-left-radius: 15px;
+
+		&:before, &:after {
+			content: '';
+			background-size: 100%;
+			position: absolute;
+			top: 15px; bottom: 0;
+			width: 15px;
+		}
+		&:before {
+			background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMyAzIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj4NCjxwb2x5bGluZSBwb2ludHM9IjMsMyAwLDMgMCwwIiBmaWxsPSIjMGUwZDBmIi8+DQo8L3N2Zz4=');
+			left: 0;			
+		}
+		&:after {
+			content: '';
+			background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMyAzIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj4NCjxwb2x5bGluZSBwb2ludHM9IjMsMCAzLDMgMCwzIiBmaWxsPSIjMGUwZDBmIi8+DQo8L3N2Zz4=');
+			right: 0;
+		}
+
+		&:last-of-type h1:after {
+			content: '';
+			display: block;
+			height: 15px;
+			background-color: #4c3a61;
+			border-bottom-right-radius: 15px;
+			border-bottom-left-radius: 15px;
+			position: absolute;
+			left: 15px; bottom: -13px; right: 15px;
+		}
+	}
 
 	h1 {
 		font-size: 32px;
@@ -64,10 +132,15 @@ section {
 			display: block;
 			margin: 0 auto 15px;
 		}
+		@include desktop {
+			font-size: 38px;
+		}
 	}
 
 	p {
 		@include prefixer(hyphens, auto, webkit moz spec);
+		max-width: 980px - (90 * 2);
+		margin: 0 auto;
 	}
 }
 
@@ -77,6 +150,11 @@ section {
 		position: absolute;
 		left: 0; top: 0; right: 0;
 		margin: -40px auto 0;
+		@include desktop {
+			width: 128px;
+			height: 128px;
+			margin-top: -64px;
+		}
 	}
 
 	#interface {
@@ -91,6 +169,15 @@ section {
 			@include hidpi(1.5) {
 				background-image: url('interface-small@2x.png');
 				background-size: 281px 157px;
+			}
+			@include desktop {
+				background-image: url('interface-large.png');
+				width: 484px;
+				height: 275px;
+				@include hidpi(1.5) {
+					background-image: url('interface-large@2x.png');
+					background-size: 484px 275px;
+				}
 			}
 		}
 		.logo {
@@ -112,6 +199,15 @@ section {
 				background-image: url('style-small@2x.png');
 				background-size: 189px 175px;
 			}
+			@include desktop {
+				background-image: url('style-large.png');
+				width: 269px;
+				height: 249px;
+				@include hidpi(1.5) {
+					background-image: url('style-large@2x.png');
+					background-size: 269px 249px;
+				}
+			}
 		}
 		.logo {
 			.upper { fill: $secondary; }
@@ -124,6 +220,9 @@ section {
 		$secondary: #4c3a61;
 		background-color: $secondary;
 		color: #fff;
+		@include desktop {
+			@include smoothing;
+		}
 		h1:before {
 			background-image: url('code-small.png');
 			width: 254px;
@@ -131,6 +230,15 @@ section {
 			@include hidpi(1.5) {
 				background-image: url('code-small@2x.png');
 				background-size: 254px 185px;
+			}
+			@include desktop {
+				background-image: url('code-large.png');
+				width: 295px;
+				height: 214px;
+				@include hidpi(1.5) {
+					background-image: url('code-large@2x.png');
+					background-size: 295px 214px;
+				}
 			}
 		}
 		.logo {
@@ -142,21 +250,39 @@ section {
 footer {
 	text-align: center;
 	padding: 20px 0 18px;
+	@include desktop {
+		padding: 60px 0;
+	}
+
 	.contact {
 		color: #20c9d0;
 		text-transform: lowercase;
 		font: 30px/1 'Futura';
 		letter-spacing: 4px;
+		@include desktop {
+			@include smoothing;
+		}
+
 		&:before {
 			content: '';
 			display: inline-block;
 			width: 67px;
 			height: 50px;
 			vertical-align: middle;
-			background: url('img/contact-footer.png') 0 0 no-repeat;
+			background: url('contact-footer.png');
 			@include hidpi(1.5) {
-				background-image: url('img/contact-footer@2x.png');
+				background-image: url('contact-footer@2x.png');
 				background-size: 67px 50px;
+			}
+			@include desktop {
+				background-image: url('contact-footer-large.png');
+				width: 130px;
+				height: 105px;
+				margin-right: -25px;
+				@include hidpi(1.5) {
+					background-image: url('contact-footer-large@2x.png');
+					background-size: 130px 105px;
+				}
 			}
 		}
 	}

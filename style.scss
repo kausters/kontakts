@@ -50,7 +50,7 @@ header {
 	h1 {
 		color: #20c9d0;
 		text-transform: uppercase;
-		font: 15px/1 'Futura';
+		font: 15px/1 'Futura', 'Trebuchet MS', 'Arial', sans-serif;
 		letter-spacing: 2px;
 		margin: 20px 0;
 		float: left;
@@ -257,7 +257,7 @@ footer {
 	.contact {
 		color: #20c9d0;
 		text-transform: lowercase;
-		font: 30px/1 'Futura';
+		font: 30px/1 'Futura', 'Trebuchet MS', 'Arial', sans-serif;
 		letter-spacing: 4px;
 		@include desktop {
 			@include smoothing;

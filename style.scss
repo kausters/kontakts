@@ -217,11 +217,19 @@ section {
 footer {
 	text-align: center;
 	padding: 20px 0 18px;
+	@include desktop {
+		padding: 55px 0 90px;
+	}
+
 	.contact {
 		color: #20c9d0;
 		text-transform: lowercase;
 		font: 30px/1 'Futura';
 		letter-spacing: 4px;
+		@include desktop {
+			@include smoothing;
+		}
+
 		&:before {
 			content: '';
 			display: inline-block;
@@ -232,6 +240,16 @@ footer {
 			@include hidpi(1.5) {
 				background-image: url('img/contact-footer@2x.png');
 				background-size: 67px 50px;
+			}
+			@include desktop {
+				background-image: url('contact-footer-large.png');
+				width: 130px;
+				height: 105px;
+				margin-right: -25px;
+				@include hidpi(1.5) {
+					background-image: url('contact-footer-large@2x.png');
+					background-size: 130px 105px;
+				}
 			}
 		}
 	}

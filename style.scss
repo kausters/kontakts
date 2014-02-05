@@ -3,6 +3,11 @@ article,aside,footer,header,hgroup,menu,nav,section{display:block;}
 a{color:inherit;text-decoration:none;outline:none;}
 ol,ul{list-style:none;}
 
+@mixin smoothing {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 @mixin desktop {
 	@media screen and (min-width: em(1024)) {
 		@content;
@@ -25,18 +30,22 @@ html {
 	@include desktop {
 		font-size: 24px;
 		line-height: 1.3em;
+		padding-top: 100px;
 	}
 }
 
 body {
 	max-width: 980px;
-	margin: 0 auto;
+	margin: 0 auto;	
 }
 
 header {
 	padding: 0 15px;
 	height: 55px;
 	@include clearfix;
+	@include desktop {
+		padding: 10px 15px 0 35px;
+	}
 
 	h1 {
 		color: #20c9d0;
@@ -45,6 +54,12 @@ header {
 		letter-spacing: 2px;
 		margin: 20px 0;
 		float: left;
+		@include desktop {
+			font-size: 26px;
+			letter-spacing: 4px;
+			margin: 10px 0;
+			@include smoothing;
+		}
 	}
 
 	.contact {
@@ -60,6 +75,10 @@ header {
 		@include hidpi(1.5) {
 			background-image: url('contact-header@2x.png');
 			background-size: 110px 43px;
+		}
+		@include desktop {
+			height: 65px;
+			margin-top: -10px;
 		}
 	}
 }

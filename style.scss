@@ -121,6 +121,15 @@ section {
 				background-image: url('interface-small@2x.png');
 				background-size: 281px 157px;
 			}
+			@include desktop {
+				background-image: url('interface-large.png');
+				width: 484px;
+				height: 275px;
+				@include hidpi(1.5) {
+					background-image: url('interface-large@2x.png');
+					background-size: 484px 275px;
+				}
+			}
 		}
 		.logo {
 			.upper { fill: $secondary; }
@@ -141,6 +150,15 @@ section {
 				background-image: url('style-small@2x.png');
 				background-size: 189px 175px;
 			}
+			@include desktop {
+				background-image: url('style-large.png');
+				width: 269px;
+				height: 249px;
+				@include hidpi(1.5) {
+					background-image: url('style-large@2x.png');
+					background-size: 269px 249px;
+				}
+			}
 		}
 		.logo {
 			.upper { fill: $secondary; }
@@ -160,6 +178,15 @@ section {
 			@include hidpi(1.5) {
 				background-image: url('code-small@2x.png');
 				background-size: 254px 185px;
+			}
+			@include desktop {
+				background-image: url('code-large.png');
+				width: 295px;
+				height: 214px;
+				@include hidpi(1.5) {
+					background-image: url('code-large@2x.png');
+					background-size: 295px 214px;
+				}
 			}
 		}
 		.logo {

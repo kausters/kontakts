@@ -18,6 +18,11 @@ html {
 	font: 18px/1.6em 'Neutra Text', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 }
 
+body {
+	max-width: 980px;
+	margin: 0 auto;
+}
+
 header {
 	padding: 0 15px;
 	height: 55px;

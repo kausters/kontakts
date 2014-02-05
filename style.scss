@@ -1,0 +1,163 @@
+html,body,div,span,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,a,em,img,q,strong,ol,ul,li,form,fieldset,label,input,textarea,table,tr,th,td,article,aside,footer,header,hgroup,menu,nav,section,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article,aside,footer,header,hgroup,menu,nav,section{display:block;}
+a{color:inherit;text-decoration:none;outline:none;}
+ol,ul{list-style:none;}
+
+@font-face {
+    font-family: 'Neutra Text';
+    src: url('fonts/neutratextbook.eot');
+    src: url('fonts/neutratextbook.eot?#iefix') format('embedded-opentype'),
+         url('fonts/neutratextbook.woff') format('woff'),
+         url('fonts/neutratextbook.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+	background-color: #0e0d0f;
+	font: 18px/1.6em 'Neutra Text', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+header {
+	padding: 0 15px;
+	height: 55px;
+	@include clearfix;
+
+	h1 {
+		color: #20c9d0;
+		text-transform: uppercase;
+		font: 15px/1 'Futura';
+		letter-spacing: 2px;
+		margin: 20px 0;
+		float: left;
+	}
+
+	.contact {
+		display: block;
+		@include hide-text;
+		width: 55px;
+		height: 55px;
+		float: right;
+		background: url('img/contact-header.png') 0 center no-repeat;
+		&:hover {
+			background-position: -55px center;
+		}
+		@include hidpi(1.5) {
+			background-image: url('contact-header@2x.png');
+			background-size: 110px 43px;
+		}
+	}
+}
+
+section {
+	padding: 60px 15px;
+	text-align: center;
+	position: relative;
+
+	h1 {
+		font-size: 32px;
+		line-height: 1.6em;
+		text-transform: uppercase;
+		margin: 0 -15px;
+		&:before {
+			content: '';
+			display: block;
+			margin: 0 auto 15px;
+		}
+	}
+
+	p {
+		@include prefixer(hyphens, auto, webkit moz spec);
+	}
+}
+
+	.logo {
+		width: 80px;
+		height: 80px;
+		position: absolute;
+		left: 0; top: 0; right: 0;
+		margin: -40px auto 0;
+	}
+
+	#interface {
+		$primary: #3c9fa3;
+		$secondary: #ffdbbd;
+		background-color: $secondary;
+		color: #000;
+		h1:before {
+			background-image: url('interface-small.png');
+			width: 281px;
+			height: 157px;
+			@include hidpi(1.5) {
+				background-image: url('interface-small@2x.png');
+				background-size: 281px 157px;
+			}
+		}
+		.logo {
+			.upper { fill: $secondary; }
+			.lower { fill: $primary; }
+		}
+	}
+
+	#style {
+		$primary: #ffdbbd;
+		$secondary: #eb6767;
+		background-color: $secondary;
+		color: #000;
+		h1:before {
+			background-image: url('style-small.png');
+			width: 189px;
+			height: 175px;
+			@include hidpi(1.5) {
+				background-image: url('style-small@2x.png');
+				background-size: 189px 175px;
+			}
+		}
+		.logo {
+			.upper { fill: $secondary; }
+			.lower { fill: $primary; }
+		}
+	}
+
+	#code {
+		$primary: #eb6767;
+		$secondary: #4c3a61;
+		background-color: $secondary;
+		color: #fff;
+		h1:before {
+			background-image: url('code-small.png');
+			width: 254px;
+			height: 185px;
+			@include hidpi(1.5) {
+				background-image: url('code-small@2x.png');
+				background-size: 254px 185px;
+			}
+		}
+		.logo {
+			.upper { fill: $secondary; }
+			.lower { fill: $primary; }
+		}
+	}
+
+footer {
+	text-align: center;
+	padding: 20px 0 18px;
+	.contact {
+		color: #20c9d0;
+		text-transform: lowercase;
+		font: 30px/1 'Futura';
+		letter-spacing: 4px;
+		&:before {
+			content: '';
+			display: inline-block;
+			width: 67px;
+			height: 50px;
+			vertical-align: middle;
+			background: url('img/contact-footer.png') 0 0 no-repeat;
+			@include hidpi(1.5) {
+				background-image: url('img/contact-footer@2x.png');
+				background-size: 67px 50px;
+			}
+		}
+	}
+}

@@ -190,6 +190,9 @@ section {
 		$secondary: #4c3a61;
 		background-color: $secondary;
 		color: #fff;
+		@include desktop {
+			@include smoothing;
+		}
 		h1:before {
 			background-image: url('code-small.png');
 			width: 254px;

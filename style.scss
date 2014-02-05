@@ -68,7 +68,7 @@ header {
 		width: 55px;
 		height: 55px;
 		float: right;
-		background: url('img/contact-header.png') 0 center no-repeat;
+		background: url('contact-header.png') 0 center no-repeat;
 		&:hover {
 			background-position: -55px center;
 		}
@@ -236,9 +236,9 @@ footer {
 			width: 67px;
 			height: 50px;
 			vertical-align: middle;
-			background: url('img/contact-footer.png') 0 0 no-repeat;
+			background: url('contact-footer.png');
 			@include hidpi(1.5) {
-				background-image: url('img/contact-footer@2x.png');
+				background-image: url('contact-footer@2x.png');
 				background-size: 67px 50px;
 			}
 			@include desktop {

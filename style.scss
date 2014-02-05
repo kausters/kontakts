@@ -3,6 +3,12 @@ article,aside,footer,header,hgroup,menu,nav,section{display:block;}
 a{color:inherit;text-decoration:none;outline:none;}
 ol,ul{list-style:none;}
 
+@mixin desktop {
+	@media screen and (min-width: 1024px) {
+		@content;
+	}
+}
+
 @font-face {
     font-family: 'Neutra Text';
     src: url('fonts/neutratextbook.eot');

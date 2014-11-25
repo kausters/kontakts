@@ -194,14 +194,17 @@ section {
 			margin: auto;
 		}
 		h2 {
-			font-size: 24px;
+			font-size: 32px;
+			font-weight: 500;
 			position: absolute;
-			right: 0; bottom: 120px; left: 0;
+			right: 0; bottom: 130px; left: 0;
+			letter-spacing: 6px;
 		}
 		h3 {
 			letter-spacing: 0;
 			line-height: 1.5;
 			bottom: 10px;
+			font-weight: 400;
 		}
 	}
 

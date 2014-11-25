@@ -180,10 +180,6 @@ section {
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		&:after {
-			display: none;
-		}
-		h1 {
-			@include hide-text;
 			width: 256px;
 			height: 256px;
 			background: url('kontakts.svg') 0 0 no-repeat;
@@ -192,7 +188,7 @@ section {
 			top: 0; right: 0; bottom: 120px; left: 0;
 			margin: auto;
 		}
-		h2 {
+		h1 {
 			font-size: 32px;
 			font-weight: 500;
 			position: absolute;

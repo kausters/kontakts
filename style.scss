@@ -17,21 +17,29 @@ header {
 	border-top: 1px solid rgba(0,0,0,.3);
 	border-bottom: 1px solid rgba(0,0,0,.3);
 	h1 {
-		font-size: 32px;
+		font-size: 40px;
 		font-weight: 500;
 		letter-spacing: 5px;
 		& + h2 {
 			margin-top: 32px;
 		}
 	}
+	h2 {
+		font-size: 18px;
+		line-height: 1.5em;
+		font-weight: 300;
+		text-transform: none;
+		letter-spacing: .8px;
+	}
 	&#web {
 		background: #eb6767 url('web.png') center center no-repeat;
 		background-size: contain;
 	}
 	&#style {
-		background: #4c3a61 url('style.png') center center no-repeat;
+		background: #7257c0 url('style.png') center center no-repeat;
 		background-size: cover;
-		color: #fff;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
 	}
 }
 
@@ -103,9 +111,9 @@ section {
 
 	h3 {
 		display: block;
-		font-size: 16px;
+		font-size: 20px;
 		line-height: 1;
-		font-weight: 600;
+		font-weight: 500;
 		letter-spacing: 3px;
 		position: absolute;
 		bottom: 100%; right: 0; left: 0;
@@ -206,7 +214,7 @@ section {
 	}
 
 	&#trojaszirgs {
-		@include section-color(darken(#2e2e2e, 4%));
+		@include section-color(#000);
 	}
 
 	&#fourseasonhouse {
@@ -222,7 +230,7 @@ section {
 	}
 
 	&#plakati {
-		@include section-color(lighten(tint(#06151d, 10%), 10%));
+		@include section-color(#191f2e);
 		img:nth-child(1) {
 			box-shadow: 0 0 1px rgba(0,0,0,.7), 0 10px 25px rgba(0,0,0,.03);
 		}
@@ -231,12 +239,12 @@ section {
 		}
 	}
 
-	&#books {
-		@include section-color(darken(shade(#55196f, 30%), 5%));
-	}
-
 	&#montmartre {
 		@include section-color(#e5d3c3);
+	}
+
+	&#books {
+		@include section-color(#2a293e);
 	}
 
 	&#dazadi {

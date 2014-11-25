@@ -218,11 +218,9 @@ section {
 
 	&#kkcid {
 		@include section-color(#f2f7f6);
-		img:nth-child(1) {
-			box-shadow: 0 0 1px rgba(0,0,0,.7), 0 10px 25px rgba(0,0,0,.03);
-		}
-		img:nth-child(2) {
-			box-shadow: 0 0 1px rgba(0,0,0,.7), 0 10px 25px rgba(0,0,0,.1);
+		img:nth-child(2),
+		img:nth-child(3) {
+			box-shadow: 0 0 1px rgba(0,0,0,.7), 0 10px 25px rgba(0,0,0,.05);
 		}
 	}
 

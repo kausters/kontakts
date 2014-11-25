@@ -3,9 +3,11 @@ article,aside,footer,header,hgroup,menu,nav,section{display:block;}
 a{color:inherit;text-decoration:none;outline:none;}
 ol,ul{list-style:none;}
 
+@import 'fonts/futura.css.scss';
+
 body {
 	text-align: center;
-	font: 16px/1.5em 'Avenir Next', 'Avenir', sans-serif;
+	font: 300 16px/1.5em 'Futura', sans-serif;
 	text-transform: uppercase;
 	min-width: 1400px;
 }

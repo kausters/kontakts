@@ -103,3 +103,21 @@ section {
 		}
 	}
 }
+
+footer {
+	position: absolute;
+	right: 0;
+	bottom: 2em;
+	left: 0;
+	color: #aaa;
+	letter-spacing: .2em;
+	text-align: center;
+	text-transform: uppercase;
+
+	a {
+		padding: 3px 10px;
+		&:hover {
+			border-bottom: 1px solid #aaa;
+		}
+	}
+}

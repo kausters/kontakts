@@ -27,7 +27,6 @@ body {
 	text-align: center;
 	font: 400 16px/1.5em 'Futura', sans-serif;
 	text-transform: uppercase;
-	min-width: 1400px;
 }
 
 header {
@@ -109,7 +108,7 @@ section {
 
 	&.items-1 {
 		img {
-			max-width: 1400px;
+			max-width: 100%;
 			&:nth-child(2) {
 				box-shadow: none !important;
 			}
@@ -117,12 +116,12 @@ section {
 	}
 	&.items-2 {
 		img {
-			max-width: 670px;
+			max-width: 48%;
 		}
 	}
 	&.items-3 {
 		img {
-			max-width: 440px;
+			max-width: 31%;
 		}
 	}
 

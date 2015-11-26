@@ -60,8 +60,7 @@ header {
 }
 
 img {
-	display: inline-block;
-	vertical-align: middle;
+	display: block;
 	box-shadow: 0 0 1px rgba(0,0,0,.7), 0 10px 25px rgba(0,0,0,.07);
 }
 
@@ -111,14 +110,8 @@ section {
 		}
 	}
 	&.items-2 {
-		img {
-			max-width: 48%;
-		}
 	}
 	&.items-3 {
-		img {
-			max-width: 31%;
-		}
 	}
 
 	h3 {
@@ -134,8 +127,13 @@ section {
 	}
 
 	.photos {
+    @include display(flex);
+    @include justify-content(center);
+    @include align-items(center);
+    @include align-content(flex-start);
 		margin-top: $spacing-top;
 		margin-bottom: $spacing-bottom;
+    padding: 0 20px;
 	}
 
   .photo {

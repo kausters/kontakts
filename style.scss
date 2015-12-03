@@ -30,11 +30,12 @@ body {
 }
 
 header {
-	padding: 20vh 0;
+	padding: 20vh 5vh;
 	border-top: 1px solid rgba(0,0,0,.3);
 	border-bottom: 1px solid rgba(0,0,0,.3);
 	h1 {
 		font-size: 40px;
+		line-height: 1;
 		font-weight: 500;
 		letter-spacing: 5px;
 		& + h2 {
@@ -43,9 +44,12 @@ header {
 	}
 	h2 {
 		font-size: 18px;
-		line-height: 1.5em;
+		line-height: 1em;
 		text-transform: none;
 		letter-spacing: .8px;
+		& + h2 {
+			margin-top: 0.5em
+		}
 	}
 	&#web {
 		background: #eb6767 url('web.png') center center no-repeat;

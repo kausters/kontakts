@@ -116,6 +116,10 @@ section {
   @include justify-content(center);
   @include align-items(center);
 
+  @include mobile {
+    height: auto;
+  }
+
 	&.items-1 {
     .photo {
       width: 100%;

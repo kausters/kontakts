@@ -230,6 +230,9 @@ section {
 	&#start {
 		line-height: 1;
 		background-color: #fff;
+		height: $height;
+		padding: 10px 0;
+
 		h1 {
 			font: 0/0 a;
 			max-width: 256px;

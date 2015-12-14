@@ -287,6 +287,10 @@ section {
 		@include section-color(#353b39);
 	}
 
+	&#wl {
+		@include section-color(#fff);
+	}
+
 	&#trojaszirgs {
 		@include section-color(#000);
 	}

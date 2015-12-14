@@ -38,8 +38,6 @@ body {
 
 header {
 	padding: 20vh 5vh;
-	border-top: 1px solid rgba(0,0,0,.3);
-	border-bottom: 1px solid rgba(0,0,0,.3);
 	h1 {
 		font-size: 40px;
 		line-height: 1;
@@ -108,9 +106,6 @@ section {
 	height: $height;
 	line-height: $height;
 	padding: 10px 0;
-
-	border-top: 1px solid rgba(0,0,0,.1);
-	border-bottom: 1px solid rgba(0,0,0,.1);
 
 	@include display(flex);
 	@include justify-content(center);

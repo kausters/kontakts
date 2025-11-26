@@ -1,0 +1,15 @@
+{
+  "name": "kontakts",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "sass": "^1.94.2",
+    "vite": "^7.2.4"
+  }
+}
